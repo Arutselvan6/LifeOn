@@ -1,0 +1,38 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Messages</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div *ngFor="let msg of msgList">
+  <ion-card *ngIf="!msg.isDismissed" >
+		<ion-card-header text-align="center">
+			{{msg.priority}}
+		</ion-card-header>
+		<ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6>Hospital Name: </ion-col>
+          <ion-col col-6> {{msg.hospitalName}} </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-6>Mobile No.: </ion-col>
+          <ion-col col-6> {{msg.mobno}} </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-6>Deadline: </ion-col>
+          <ion-col col-6> {{msg.deadline}} </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-6><button ion-button block (click)="getEnquiry(msg.id)" >Enquire</button></ion-col>
+          <ion-col col-6><button ion-button block (click)="dismissMsg(msg.id)">Dismiss</button></ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+  </div>
+</ion-content>

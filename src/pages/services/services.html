@@ -1,0 +1,33 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>services</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item (click)="showProfile()" >
+      <ion-label>My Profile</ion-label>
+      <ion-icon name="arrow-dropright" item-end></ion-icon>
+    </ion-item>
+    <ion-item (click)="showMessages()" >
+      <ion-label>Messages</ion-label>
+      <ion-icon name="arrow-dropright" item-end></ion-icon>
+    </ion-item>
+    <ion-item (click)="showHistory()" >
+      <ion-label>History</ion-label>
+      <ion-icon name="arrow-dropright" item-end></ion-icon>
+    </ion-item>
+    <ion-item (click)="showNews()" >
+      <ion-label>News</ion-label>
+      <ion-icon name="arrow-dropright" item-end></ion-icon>
+    </ion-item>
+    <ion-item (click)="logout()" >
+      <ion-label>Logout</ion-label>
+      <ion-icon name="arrow-dropright" item-end></ion-icon>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,62 @@
+<!--
+  Generated template for the ProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>profile</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-card *ngIf="isDataAvailable">
+		<ion-card-header text-align="center">
+			My Profile
+		</ion-card-header>
+		<ion-card-content>
+			<ion-grid>
+				<ion-row>
+					<ion-col col-6>Name </ion-col>
+					<ion-col col-6>{{userdata.name}}</ion-col>
+				</ion-row>
+				<ion-row>
+            <ion-col col-6>Ph. No.</ion-col>
+            <ion-col col-6>{{userdata.phno}}</ion-col>
+        </ion-row>
+        <ion-row>
+					<ion-col col-6>Email</ion-col>
+					<ion-col col-6>{{userdata.email}}</ion-col>                    
+				</ion-row>
+				<ion-row>
+					<ion-col col-6>Age</ion-col>
+					<ion-col col-6>{{userdata.age}}</ion-col>
+        </ion-row>
+        <ion-row>
+					<ion-col col-6>Gender</ion-col>
+					<ion-col col-6>{{userdata.gender}}</ion-col>
+        </ion-row>
+        <ion-row>
+					<ion-col col-6>Blood Group</ion-col>
+					<ion-col col-6>{{userdata.bgroup}}</ion-col>
+        </ion-row>
+        <ion-row>
+					<ion-col col-6>Alcoholist</ion-col>
+					<ion-col col-6>{{userdata.alcoholist}}</ion-col>
+        </ion-row>
+        <ion-row>
+					<ion-col col-6>Smoker</ion-col>
+					<ion-col col-6>{{userdata.smoker}}</ion-col>
+				</ion-row>
+			</ion-grid>
+		</ion-card-content>
+  </ion-card>
+  <div *ngIf="!isDataAvailable">
+    No Data Available.
+  </div>
+</ion-content>

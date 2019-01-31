@@ -1,0 +1,83 @@
+<!--
+  Generated template for the RegisterPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Register</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <form>
+        <ion-list>
+          <ion-item>
+            <ion-label floating>Name</ion-label>
+            <ion-input type="text" name="name" [(ngModel)]="userdata.name" ></ion-input>
+            </ion-item>
+    
+            <ion-item>
+                <ion-label floating>Age</ion-label>
+                <ion-input type="number" name="age" [(ngModel)]="userdata.age"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label floating>MobileNo</ion-label>
+                <ion-input type="text" name="phno" [(ngModel)]="userdata.phno"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label floating>E-mail</ion-label>
+                    <ion-input type="text" name="email" [(ngModel)]="userdata.email"></ion-input>
+                    </ion-item>
+
+                <ion-item>
+                    <ion-label floating>Password</ion-label>
+                    <ion-input type="password" name="pwd" [(ngModel)]="userdata.pwd"></ion-input>
+                    </ion-item>
+                    
+                
+                <ion-item>
+                    <ion-label floating>BloodGroup</ion-label>
+                    <ion-input type="text" name="bgroup" [(ngModel)]="userdata.bgroup"></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-label floating>Address</ion-label>
+                  <ion-input type="text" name="address" [(ngModel)]="userdata.address"></ion-input>
+              </ion-item>
+            </ion-list>
+            <ion-list radio-group name="gender" [(ngModel)]="userdata.gender" >
+              <ion-item>
+                <ion-label>Male</ion-label>
+                <ion-radio value="male"></ion-radio>
+              </ion-item>
+              <ion-item>
+                <ion-label>Female</ion-label>
+                <ion-radio value="female"></ion-radio>
+              </ion-item>
+            </ion-list>
+            <ion-list>
+              <ion-item>
+                <ion-label>Alcoholist</ion-label>
+                <ion-radio [checked]="isAlcoholist" (ionSelect)="checkAlcohol()" ></ion-radio>
+              </ion-item>
+              <ion-item>
+                <ion-label>Smoker</ion-label>
+                <ion-radio [checked]="isSmoker" (ionSelect)="checkSmoke()" ></ion-radio>
+              </ion-item>
+            </ion-list>
+
+            <div padding>
+              <button ion-button (click)="doregister()">Register</button>
+          
+                <button ion-button (click)="doclear()">clear</button>
+            </div>
+        
+      </form>
+
+</ion-content>
